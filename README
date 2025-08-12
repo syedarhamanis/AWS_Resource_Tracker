@@ -1,1 +1,3 @@
 This project is to track aws resources
+Give the permission to this file for the execution using chmod
+Before runnig this script need to AWS Coniguration using command (AWS Configure) followed by providing your AWS Access Key ID and Secre Key and enter the region of Ec2 and file type (JSON or YAML) select JSON 
