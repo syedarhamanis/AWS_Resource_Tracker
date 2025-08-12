@@ -5,14 +5,14 @@
 # Author: Syed Arham Anis
 # Date: 11/08/2025
 
-# This project is  track the AWS Resources
+# This project is to track the AWS Resources
 
 # Version: v1
 
 #####################################################
 
 
-set -x
+set -x #Debug mode
 
 # AWS S3
 # AWS EC2
@@ -29,7 +29,10 @@ aws s3 ls
 
 echo "Print the EC2 Instances"
 
-aws ec2 describe-instances | jq 'Reservations[].Instances[].VolumeId'
+ # NOTE: modify the jq filter below to extract different fields as per your requirement
+ 
+aws ec2 describe-instances | jq 'Reservations[].Instances[].VolumeId'  # Filters output to only show volume IDs
+
 
 # List the Lambda functions
 
