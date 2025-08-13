@@ -31,7 +31,7 @@ echo "Print the EC2 Instances"
 
  # NOTE: modify the jq filter below to extract different fields as per your requirement
  
-aws ec2 describe-instances | jq -r '.Reservations[].Instances[].InstanceID'  # Filters output to only show Instance IDs
+aws ec2 describe-instances #| jq -r '.Reservations[].Instances[].InstanceID'  # Filters output to only show Instance IDs
 
 # List the Lambda functions
 
